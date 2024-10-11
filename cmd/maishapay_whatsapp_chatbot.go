@@ -45,5 +45,5 @@ func main() {
 
 	bot.StartReceivingNotifications()
 
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", 3002), nil))
+	http.ListenAndServe(fmt.Sprintf(":%v", os.Getenv("PORT")), nil)
 }
