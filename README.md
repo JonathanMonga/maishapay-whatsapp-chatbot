@@ -27,7 +27,7 @@ To work correctly, the response to the entered request must be a version of Go n
     go version go 1.19
 ```
 
-Download and unzip the [zip-archive](https://github.com/green-api/maishapay-whatsapp-chatbot) of the project or clone it with the version control system command:
+Download and unzip the [zip-archive](https://github.com/JonathanMonga/maishapay-whatsapp-chatbot) of the project or clone it with the version control system command:
 
 <details>
 <summary>How to install Git version control?</summary>
@@ -36,7 +36,7 @@ Download and install the Git version control system appropriate for your operati
 </details>
 
 ```
-    git clone https://github.com/green-api/maishapay-whatsapp-chatbot
+    git clone https://github.com/JonathanMonga/maishapay-whatsapp-chatbot
 ```
 
 Open the project in any IDE.
@@ -68,7 +68,7 @@ You can then run the program by clicking start in the IDE interface or entering 
 ```
 This request will start the chatbot. The process begins with chatbot initialization, which includes changing the settings of the associated instance.
 
-The library [whatsapp-chatbot-golang](https://github.com/green-api/whatsapp-chatbot-golang) contains a mechanism for changing instance settings using the [SetSettings](https://green-api.com/en/docs/api/account/SetSettings/) method, which is launched when the chatbot is turned on.
+The library [whatsapp-chatbot-golang](https://github.com/JonathanMonga/whatsapp-chatbot-golang) contains a mechanism for changing instance settings using the [SetSettings](https://green-api.com/en/docs/api/account/SetSettings/) method, which is launched when the chatbot is turned on.
 
 All settings for receiving notifications are disabled by default; the chatbot will enable the following settings:
 ```
@@ -80,7 +80,7 @@ which are responsible for receiving notifications about incoming and outgoing me
 
 The process of changing settings takes several minutes, during which time the instance will be unavailable. Messages sent to the chatbot during this time will not be processed.
 
-After the settings are applied, notifications about previously received incoming messages will be deleted. This process is also written in the library [whatsapp-chatbot-golang](https://github.com/green-api/whatsapp-chatbot-golang) and starts automatically after changing the settings.
+After the settings are applied, notifications about previously received incoming messages will be deleted. This process is also written in the library [whatsapp-chatbot-golang](https://github.com/JonathanMonga/whatsapp-chatbot-golang) and starts automatically after changing the settings.
 
 This is necessary so that the chatbot does not start processing messages from old chats.
 
@@ -219,13 +219,13 @@ As the chatbot indicates in its responses, all messages are sent via the API. Do
 
 As for receiving messages, messages are read through the HTTP API. Documentation on methods for receiving messages can be found at [greenapi.com/en/docs/api/receiving/technology-http-api](https://greenapi.com/en/docs/api/receiving/technology-http-api/).
 
-The chatbot uses the library [whatsapp-chatbot-golang](https://github.com/green-api/whatsapp-chatbot-golang), where methods for sending and receiving messages are already integrated, so messages are read automatically and sending regular text messages is simplified .
+The chatbot uses the library [whatsapp-chatbot-golang](https://github.com/JonathanMonga/whatsapp-chatbot-golang), where methods for sending and receiving messages are already integrated, so messages are read automatically and sending regular text messages is simplified .
 
 For example, a chatbot automatically sends a message to the contact from whom it received the message:
 ```go
      message.AnswerWithText(util.GetString([]string{"select_language"}))
 ```
-However, other send methods can be called directly from the [whatsapp-api-client-golang](https://github.com/green-api/whatsapp-api-client-golang) library. Like, for example, when receiving an avatar:
+However, other send methods can be called directly from the [whatsapp-api-client-golang](https://github.com/JonathanMonga/whatsapp-api-client-golang) library. Like, for example, when receiving an avatar:
 ```go
      message.GreenAPI.Methods().Service().GetAvatar(chatId)
 ```
@@ -234,4 +234,4 @@ However, other send methods can be called directly from the [whatsapp-api-client
 
 Licensed under [Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0/).
 
-[LICENSE](https://github.com/green-api/maishapay-whatsapp-chatbot/blob/master/LICENCE).
+[LICENSE](https://github.com/JonathanMonga/maishapay-whatsapp-chatbot/blob/master/LICENCE).
