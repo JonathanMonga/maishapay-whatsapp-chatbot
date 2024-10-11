@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"net/http"
 	"os"
 
 	"maishapay-whatsapp-chatbot/scenes"
@@ -14,7 +12,6 @@ import (
 func main() {
 	idInstance := os.Getenv("ID_INSTANCE")
 	authToken := os.Getenv("AUTH_TOKEN")
-	port := os.Getenv("PORT")
 
 	if idInstance == "{ID_INSTANCE}" || authToken == "{AUTH_TOKEN}" {
 		log.Fatal("No idInstance or authToken set")
@@ -45,7 +42,4 @@ func main() {
 	bot.SetStartScene(scenes.StartScene{})
 
 	bot.StartReceivingNotifications()
-
-	// listen and serve
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), nil))
 }
