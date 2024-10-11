@@ -9,18 +9,19 @@ import (
 )
 
 func main() {
-	idInstance := "{idInstance}"
-	authToken := "{authToken}"
+	idInstance := "{ID_INSTANCE}"
+	authToken := "{AUTH_TOKEN}"
 	envFile, err := godotenv.Read("instance.env")
 	if err == nil {
-		if val, exists := envFile["idInstance"]; exists && len(val) > 0 {
+		if val, exists := envFile["ID_INSTANCE"]; exists && len(val) > 0 {
 			idInstance = val
 		}
-		if val, exists := envFile["authToken"]; exists && len(val) > 0 {
+		if val, exists := envFile["AUTH_TOKEN"]; exists && len(val) > 0 {
 			authToken = val
 		}
 	}
-	if idInstance == "{idInstance}" || authToken == "{authToken}" {
+
+	if idInstance == "{ID_INSTANCE}" || authToken == "{AUTH_TOKEN}" {
 		log.Fatal("No idInstance or authToken set")
 	}
 
@@ -41,6 +42,7 @@ func main() {
 		"pollMessageWebhook":         "yes",
 		"markIncomingMessagesReaded": "yes",
 	})
+	
 	if err != nil {
 		bot.ErrorChannel <- err
 	}
