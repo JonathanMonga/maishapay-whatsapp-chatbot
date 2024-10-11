@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"log"
+	"net/http"
 	"os"
 
 	"maishapay-whatsapp-chatbot/scenes"
@@ -42,4 +44,6 @@ func main() {
 	bot.SetStartScene(scenes.StartScene{})
 
 	bot.StartReceivingNotifications()
+
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", 3002), nil))
 }
