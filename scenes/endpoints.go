@@ -11,8 +11,7 @@ import (
 	chatbot "github.com/green-api/whatsapp-chatbot-golang"
 )
 
-type EndpointsScene struct {
-}
+type EndpointsScene struct{}
 
 func (s EndpointsScene) Start(bot *chatbot.Bot) {
 

@@ -6,8 +6,7 @@ import (
 	chatbot "github.com/green-api/whatsapp-chatbot-golang"
 )
 
-type MainMenuScene struct {
-}
+type MainMenuScene struct{}
 
 func (s MainMenuScene) Start(bot *chatbot.Bot) {
 	bot.IncomingMessageHandler(func(message *chatbot.Notification) {
