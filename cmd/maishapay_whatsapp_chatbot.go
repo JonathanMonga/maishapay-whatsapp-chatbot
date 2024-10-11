@@ -14,6 +14,7 @@ import (
 func main() {
 	idInstance := os.Getenv("ID_INSTANCE")
 	authToken := os.Getenv("AUTH_TOKEN")
+	port := os.Getenv("PORT")
 
 	if idInstance == "{ID_INSTANCE}" || authToken == "{AUTH_TOKEN}" {
 		log.Fatal("No idInstance or authToken set")
@@ -46,6 +47,5 @@ func main() {
 	bot.StartReceivingNotifications()
 
 	// listen and serve
-	port := fmt.Sprintf(":%v", 3002)
-	log.Fatal(http.ListenAndServe(port, nil))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), nil))
 }
