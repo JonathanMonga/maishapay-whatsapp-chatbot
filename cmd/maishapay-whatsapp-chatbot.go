@@ -12,7 +12,7 @@ import (
 func main() {
 	idInstance := "{ID_INSTANCE}"
 	authToken := "{AUTH_TOKEN}"
-	envFile, err := godotenv.Read("instance.env")
+	envFile, err := godotenv.Read(".env")
 	if err == nil {
 		if val, exists := envFile["ID_INSTANCE"]; exists && len(val) > 0 {
 			idInstance = val
