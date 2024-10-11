@@ -1,5 +1,5 @@
-select_language: "*1* - English \n*2* - Francais\n*3* - Swahili"
-specify_language: "Please choose a language for further conversation\n*1* - English \n*2* - Francais\n*3* - Swahili"
+select_language: "Please choose a language for further conversation\n\n*1* - English \n*2* - Francais\n*3* - Swahili"
+specify_language: "Please specify a language for further conversation\n*1* - English \n*2* - Francais\n*3* - Swahili"
 please_use_text: "Please enter a text message for further conversation with bot\n"
 welcome_message:
   ru: "Добро пожаловать в GREEN API чат-бот, "
