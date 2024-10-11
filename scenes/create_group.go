@@ -6,8 +6,7 @@ import (
 	chatbot "github.com/green-api/whatsapp-chatbot-golang"
 )
 
-type CreateGroupScene struct {
-}
+type CreateGroupScene struct{}
 
 func (s CreateGroupScene) Start(bot *chatbot.Bot) {
 
