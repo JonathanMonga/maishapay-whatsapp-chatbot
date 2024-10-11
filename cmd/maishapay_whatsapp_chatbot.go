@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"log"
+	"net/http"
 	"os"
 
 	"maishapay-whatsapp-chatbot/scenes"
@@ -34,7 +36,7 @@ func main() {
 		"pollMessageWebhook":         "yes",
 		"markIncomingMessagesReaded": "yes",
 	})
-	 
+
 	if err != nil {
 		bot.ErrorChannel <- err
 	}
@@ -42,4 +44,8 @@ func main() {
 	bot.SetStartScene(scenes.StartScene{})
 
 	bot.StartReceivingNotifications()
+
+	// listen and serve
+	port := fmt.Sprintf(":%v", 3002)
+	log.Fatal(http.ListenAndServe(port, nil))
 }
