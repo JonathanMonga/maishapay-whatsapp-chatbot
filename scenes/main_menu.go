@@ -42,9 +42,9 @@ func (s MainMenuScene) sendMainMenu(message *chatbot.Notification, lang string) 
 
 	var welcomeFileURL string
 	if lang == "en" {
-		welcomeFileURL = "https://raw.githubusercontent.com/JonathanMonga/maishapay-whatsapp-chatbot/refs/heads/master/assets/Mascot.jpg"
+		welcomeFileURL = "https://raw.githubusercontent.com/JonathanMonga/maishapay-whatsapp-chatbot/refs/heads/main/assets/Mascot.jpg"
 	} else {
-		welcomeFileURL = "https://raw.githubusercontent.com/JonathanMonga/maishapay-whatsapp-chatbot/refs/heads/master/assets/Mascot.jpg"
+		welcomeFileURL = "https://raw.githubusercontent.com/JonathanMonga/maishapay-whatsapp-chatbot/refs/heads/main/assets/Mascot.jpg"
 	}
 	message.SendUrlFile(welcomeFileURL,
 		"Mascot.jpg",
