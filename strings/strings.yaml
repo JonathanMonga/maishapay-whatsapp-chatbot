@@ -1,9 +1,16 @@
 select_language: "Please choose a language for further conversation\n\n*1* - English \n*2* - Francais\n*3* - Swahili"
 specify_language: "Please specify a language for further conversation\n*1* - English \n*2* - Francais\n*3* - Swahili"
 please_use_text: "Please enter a text message for further conversation with bot\n"
+salutation_message:
+  ru: "Добро пожаловать в GREEN API чат-бот, "
+  en: "Hey Salut, "
+  he: "ברוכים הבאים לצ'אטבוט GREEN API, "
+  es: "Bienvenido al chatbot GREEN API, "
+  ar: ""
+  kz: "GREEN API чат-ботына қош келдіңіз, "
 welcome_message:
   ru: "Добро пожаловать в GREEN API чат-бот, "
-  en: "Hey Salut,\nJe suis MaishaPay AI. Obtenez mon assistance pour les services de paiement et d’informations.\nCi-dessous, vous trouverez le lien vers les termes et conditions d’utilisation de MaishaPay AI : https://maishapay.net/terms."
+  en: "\nJe suis MaishaPay AI. Obtenez mon assistance pour les services de paiement et d’informations.\nCi-dessous, vous trouverez le lien vers les termes et conditions d’utilisation de MaishaPay AI : https://maishapay.net/terms."
   he: "ברוכים הבאים לצ'אטבוט GREEN API, "
   es: "Bienvenido al chatbot GREEN API, "
   ar: ""
