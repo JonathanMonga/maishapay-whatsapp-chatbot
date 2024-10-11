@@ -3,8 +3,9 @@ package main
 import (
 	"log"
 
+	"maishapay-whatsapp-chatbot/scenes"
+
 	chatbot "github.com/green-api/whatsapp-chatbot-golang"
-	"github.com/green-api/whatsapp-demo-chatbot-golang/scenes"
 	"github.com/joho/godotenv"
 )
 
@@ -42,7 +43,7 @@ func main() {
 		"pollMessageWebhook":         "yes",
 		"markIncomingMessagesReaded": "yes",
 	})
-	
+
 	if err != nil {
 		bot.ErrorChannel <- err
 	}

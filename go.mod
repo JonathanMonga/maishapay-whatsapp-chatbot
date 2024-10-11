@@ -1,4 +1,4 @@
-module github.com/green-api/whatsapp-demo-chatbot-golang
+module maishapay-whatsapp-chatbot
 
 go 1.19
 

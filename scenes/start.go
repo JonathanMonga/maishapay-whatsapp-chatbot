@@ -1,8 +1,9 @@
 package scenes
 
 import (
+	"maishapay-whatsapp-chatbot/util"
+
 	chatbot "github.com/green-api/whatsapp-chatbot-golang"
-	"github.com/green-api/whatsapp-demo-chatbot-golang/util"
 )
 
 type StartScene struct{}
