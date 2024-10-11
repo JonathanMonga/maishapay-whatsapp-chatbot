@@ -1,5 +1,5 @@
 #!/bin/bash
 
-./bin/maishapay-whatsapp-chatbot
+./bin/maishapay_whatsapp_chatbot
 
 

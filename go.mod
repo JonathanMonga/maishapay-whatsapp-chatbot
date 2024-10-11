@@ -1,6 +1,6 @@
 module maishapay-whatsapp-chatbot
 
-go 1.19
+go 1.20
 
 require (
 	github.com/green-api/whatsapp-chatbot-golang v0.0.5
