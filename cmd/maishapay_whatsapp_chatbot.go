@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-
 	"maishapay-whatsapp-chatbot/scenes"
 
 	chatbot "github.com/green-api/whatsapp-chatbot-golang"
